@@ -25,7 +25,7 @@ let lorem = "Qui consequatur. Commodi. Ipsum vel duis yet minima \n"
 
 // es6
 let lorem2 = `otra frase epica que necesitamos
-ahora es otra frase epica
+ahora es otra frase epicaa
 `;
 
 console.log(lorem);
