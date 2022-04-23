@@ -94,3 +94,68 @@ console.log(globalVar);//podes acceder a una variable var de forma global
 const a = 'b';
 a = 'a';
 console.log(a);//'b'
+
+//Arrow Functions, Promesas y Parámetros en objetos---------------------------------------------------------------------------------------------
+
+//crear un objeto a partir de unos datos
+let Name = "Azul";
+let Age = 19;
+
+//antes
+obj1 = {name: Name, age: Age}
+
+//es6
+obj2 = {Name, Age}
+
+
+
+//funciones
+
+const people = [
+  {name: 'Azul', age: '19'},
+  {name: 'Tomas', age: '21'},
+  {name: 'Camila', age: '16'}
+]
+
+//antes
+const listOfNames = people.map(function (item) {
+  console.log(item.name) ;
+})
+
+//es6
+
+//para crear una funcion con extenciones
+const listOfNames2 = people.map((item) => console.log(item.name))
+
+//para crear una funcion con varios parametros
+const listOfNames3 = (parametro1 = "parametro1", parametro2 = "parametro2", parametro3 = "parametro3") => {
+  console.log(`Funcion de flecha con parametros ${parametro1}, ${parametro2}, ${parametro3}`)
+}
+
+//para crear una funcion con un parametro
+const listOfNames4 = item => {
+  console.log(`Funcion de flecha con parametro ${item}`)
+}
+
+//para que retorne un valor
+const square = num => num * num;
+
+
+//Promesas
+
+// esta es la promesa
+const helloPromise = () => {
+  return new Promise((resolve , reject) => {
+    if(true){
+      resolve('Verdadero')
+    } else{
+      reject('Falso')
+    }
+  })
+}
+
+//y aca la estamos llamando
+
+helloPromise()
+  .then(resolve => console.log(resolve))//este es un parametro que recibe el valor de resolve y puede tener cualquier nombre yo le puse asi para no confundirme
+  .catch(reject => console.log(reject))//este es un parametro que recibe el valor de reject y puede tener cualquier nombre yo le puse asi para no confundirme
