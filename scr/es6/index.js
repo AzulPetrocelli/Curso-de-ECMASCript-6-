@@ -1,4 +1,4 @@
-//Defaults Params Y Concatenacion---------------------------------------------------------------------------------------------------------------
+//Defaults Params Y Concatenacion-------------------------------------------------------------------------------------
 //parametros por defecto
 
 //antes
@@ -30,7 +30,7 @@ console.log(epicPhrase);
 let epicPhrase2 = `${hello} ${world}`;
 console.log(epicPhrase2);
 
-//Let Y Const, Multilinea, Spread Operator y desestructuracion----------------------------------------------------------------------------------
+//Let Y Const, Multilinea, Spread Operator y desestructuracion--------------------------------------------------------
 
 //Espaciado String
 
@@ -95,7 +95,7 @@ const a = 'b';
 a = 'a';
 console.log(a);//'b'
 
-//Arrow Functions, Promesas y Parámetros en objetos---------------------------------------------------------------------------------------------
+//Arrow Functions, Promesas y Parámetros en objetos-------------------------------------------------------------------
 
 //crear un objeto a partir de unos datos
 let Name = "Azul";
@@ -159,3 +159,48 @@ const helloPromise = () => {
 helloPromise()
   .then(resolve => console.log(resolve))//este es un parametro que recibe el valor de resolve y puede tener cualquier nombre yo le puse asi para no confundirme
   .catch(reject => console.log(reject))//este es un parametro que recibe el valor de reject y puede tener cualquier nombre yo le puse asi para no confundirme
+
+
+
+//Clases, Módulos y Generadores--------------------------------------------------------------------------------------
+
+//Clase 
+class calculator {
+  constructor() {//funcion constructora
+    this._valueA = 0;
+    this._valueB = 0;
+  }
+  sum(valueA, valueB) {
+    this._valueA = valueA;
+    this._valueB = valueB;
+    return this._valueA + this._valueB;
+  }
+}
+
+//creo un objeto con la clase calculator
+const calc = new calculator();
+//llamo al metodo sum de la clase calculator() con sus respectivos parametros
+console.log(calc.sum(2, 2));
+
+
+//Importar una funcion
+import { ejemplo } from './module';
+
+ejemplo();
+
+
+//Funcion generator
+
+function* helloWorld() {
+  if (true) {
+    yield 'Hello, ';
+  }
+  if (true) {
+    yield 'World';
+  }
+};
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);// 'Hello, '
+console.log(generatorHello.next().value);// 'World'
+console.log(generatorHello.next().value);// undefined
