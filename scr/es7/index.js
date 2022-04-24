@@ -1,6 +1,6 @@
 //¿Qué se implementó en ES7?-----------------------------------------------------------------------------------------
 
-//Metodo includes()
+//Metodo includes()--------------------------------------------------------------------------------------------------
 //lo que hace es retornar true o false dependiendo de si el
 //valor que le especificamos se encuentra dentro del array o no
 
@@ -13,7 +13,7 @@ if (numbers.includes(7)){
 }
 
 
-//Numeros elevados
+//Numeros elevados--------------------------------------------------------------------------------------------------
 
 let base = 4;
 let exponente = 2;
