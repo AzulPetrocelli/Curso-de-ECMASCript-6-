@@ -1,4 +1,4 @@
-//¿Qué se implementó en ES8?-----------------------------------------------------------------------------------------
+//¿QUE SE IMPLEMENTO EN ES8?-----------------------------------------------------------------------------------------
 
 //Object.entries-----------------------------------------------------------------------------------------------------
 const data = {
@@ -34,3 +34,32 @@ console.log(string.padStart(9, 'Hola'));// Hola Azul
 //variable.padEnd(cantidad de caracteres , 'Texto que va al final')
 console.log(string.padEnd(10, 'Adios'));// Azul Adios
 
+//ASYNC Y AWAIT------------------------------------------------------------------------------------------------------
+
+const helloWorld = () => {
+  return new Promise((resolve, reject) => {
+    if(true){
+      setTimeout( () => resolve('Hello World'), 3000)
+    }else{
+      reject(new Error('Test Error'))
+    }
+  });
+};
+
+const helloAsync = async () => {
+  const hello = await helloWorld();
+  console.log(hello);
+}
+
+helloAsync();
+
+const anotherFunction = async () => {
+  try{
+    const hello = await helloWorld();
+    console.log(hello);
+  }catch(error){
+    console.log(error);
+  }
+}
+
+anotherFunction();
