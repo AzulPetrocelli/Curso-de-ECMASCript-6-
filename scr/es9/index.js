@@ -53,7 +53,7 @@ const degexData = /([0-9]{4})-([0-9]{2})-([0-9]{2})/
 const match = degexData.exec('2022-04-25');
 const year = match[1];
 const month = match[2];
-const day = match[3];
+const day = match[3]; 
 
 console.log(match);//['2022-04-25', '2022', '04', '25', index: 0, input: '2022-04-25', groups: undefined]
 console.log(year);//2022
